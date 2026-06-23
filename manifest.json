@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-kafka-streams",
-  "version": "1.0.0",
-  "description": "Apache Kafka/Confluent Event Stream Agent — Connect to Kafka clusters to publish/consume, manage topics, monitor lag",
+  "version": "1.0.1",
+  "description": "Apache Kafka/Confluent Event Stream Agent \u2014 Connect to Kafka clusters to publish/consume, manage topics, monitor lag",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,19 +9,45 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-kafka-streams",
   "homepage": "https://cortexprism.io/marketplace/plugins/kafka-streams",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "kafka_list_topics",
       "description": "List Kafka topics with partition info",
       "params": []
     },
-    { "name": "kafka_consume", "description": "Consume messages from a topic", "params": [] },
-    { "name": "kafka_produce", "description": "Publish message to a topic", "params": [] },
-    { "name": "kafka_monitor_lag", "description": "Monitor consumer group lag", "params": [] },
-    { "name": "kafka_create_topic", "description": "Create a new topic", "params": [] }
+    {
+      "name": "kafka_consume",
+      "description": "Consume messages from a topic",
+      "params": []
+    },
+    {
+      "name": "kafka_produce",
+      "description": "Publish message to a topic",
+      "params": []
+    },
+    {
+      "name": "kafka_monitor_lag",
+      "description": "Monitor consumer group lag",
+      "params": []
+    },
+    {
+      "name": "kafka_create_topic",
+      "description": "Create a new topic",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
